@@ -56,7 +56,7 @@ function Home() {
             {/* SLIDE 1 */}
             <div
               className="carousel-item active"
-              data-bs-interval="3000"
+              data-bs-interval="5000"
             >
               <div
                 className="hero-section hero-short"
