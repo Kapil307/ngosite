@@ -1,0 +1,694 @@
+/* ========================================
+   IMPACT PAGE
+======================================== */
+
+.impact-page {
+  --impact-green: var(--primary-green, #315b3b);
+  --impact-text: #26372d;
+  --impact-muted: #5d665f;
+  --impact-border: #e1e9df;
+  --impact-focus: #d2a95c;
+
+  width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+  background: #fff;
+  color: var(--impact-text);
+}
+
+.impact-page *,
+.impact-page *::before,
+.impact-page *::after {
+  box-sizing: border-box;
+}
+
+.impact-page img {
+  max-width: 100%;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.impact-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 440px;
+  overflow: hidden;
+  background: #203e2c;
+}
+
+.impact-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+.impact-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(12, 30, 19, 0.86) 0%,
+    rgba(15, 36, 23, 0.67) 55%,
+    rgba(12, 30, 19, 0.42) 100%
+  );
+  pointer-events: none;
+}
+
+.impact-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.impact-hero-content {
+  width: min(1100px, calc(100% - 48px));
+  margin: 65px auto 50px;
+  color: #fff;
+}
+
+.impact-eyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #dcebcf;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.impact-hero-content h1 {
+  max-width: 850px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(34px, 5vw, 60px);
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: -1.2px;
+  text-wrap: balance;
+}
+
+.impact-hero-content h1 span {
+  color: #d4e7bb;
+}
+
+.impact-hero-content > p {
+  max-width: 590px;
+  margin: 20px 0 28px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 16px;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+
+.impact-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1px solid #d8e8c7;
+  border-radius: 5px;
+  background: #d8e8c7;
+  color: #24452f;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.impact-hero-btn:hover {
+  transform: translateY(-2px);
+  background: #fff;
+  color: #24452f;
+}
+
+.impact-hero-bottom {
+  position: absolute;
+  right: max(24px, calc((100% - 1100px) / 2));
+  bottom: 20px;
+  left: max(24px, calc((100% - 1100px) / 2));
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.impact-bottom-line {
+  flex: 0 0 30px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+/* ========================================
+   IMPACT CONTENT
+======================================== */
+
+.impact-content {
+  padding: clamp(50px, 7vw, 75px) 20px clamp(55px, 7.5vw, 80px);
+  background: #fff;
+}
+
+.impact-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.impact-intro {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.impact-intro-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: var(--impact-green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.impact-intro-label span {
+  flex: 0 0 25px;
+  height: 2px;
+  background: #91ad78;
+}
+
+.impact-intro h2 {
+  margin: 0 0 22px;
+  color: #263c2e;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+  text-wrap: balance;
+}
+
+.impact-intro h2 span {
+  color: var(--impact-green);
+}
+
+.impact-intro > p {
+  max-width: 790px;
+  margin: 0 auto 14px;
+  color: var(--impact-muted);
+  font-size: 15px;
+  line-height: 1.9;
+  text-wrap: pretty;
+}
+
+/* ========================================
+   EXPLORE HEADING
+======================================== */
+
+.impact-explore-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 65px 0 25px;
+}
+
+.impact-section-label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--impact-green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.impact-explore-heading h3 {
+  margin: 0;
+  color: #263c2e;
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 800;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.impact-explore-heading > p {
+  max-width: 360px;
+  margin: 0 0 3px;
+  color: #626d64;
+  font-size: 14px;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+/* ========================================
+   IMPACT CARDS
+======================================== */
+
+.impact-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 20px;
+}
+
+.impact-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 275px;
+  padding: 25px 21px 22px;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--impact-border);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 5px 22px rgba(33, 64, 41, 0.045);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-4px);
+  border-color: #9bb99b;
+  box-shadow: 0 15px 35px rgba(33, 64, 41, 0.11);
+}
+
+.impact-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 23px;
+}
+
+.impact-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #edf4e9;
+  color: var(--impact-green);
+  font-size: 22px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.impact-card:hover .impact-card-icon {
+  background: var(--impact-green);
+  color: #fff;
+}
+
+.impact-card-number {
+  color: #748273;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.impact-card h4 {
+  margin: 0 0 12px;
+  color: #294533;
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+.impact-card p {
+  flex-grow: 1;
+  margin: 0 0 22px;
+  color: #606b62;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.impact-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 9px;
+  margin-top: auto;
+  color: var(--impact-green);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.impact-link i {
+  transition: transform 0.2s ease;
+}
+
+.impact-link:hover {
+  color: #416b46;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.impact-link:hover i {
+  transform: translateX(4px);
+}
+
+/* ========================================
+   CALL TO ACTION
+======================================== */
+
+.impact-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(52px, 7vw, 75px) 20px;
+  background: #254a32;
+  color: #fff;
+  text-align: center;
+}
+
+.impact-cta-decoration {
+  position: absolute;
+  z-index: -1;
+  width: 280px;
+  height: 280px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.impact-cta-decoration-one {
+  top: -170px;
+  left: -70px;
+}
+
+.impact-cta-decoration-two {
+  right: -100px;
+  bottom: -210px;
+  width: 370px;
+  height: 370px;
+}
+
+.impact-cta-inner {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.impact-cta-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #dcebcf;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.impact-cta-inner h2 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.impact-cta-inner h2 span {
+  color: #d7e7c5;
+}
+
+.impact-cta-inner > p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  line-height: 1.9;
+  text-wrap: pretty;
+}
+
+.impact-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.impact-donate-btn,
+.impact-volunteer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1px solid #d7e7c5;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.impact-donate-btn {
+  background: #d7e7c5;
+  color: #254a32;
+}
+
+.impact-donate-btn:hover {
+  transform: translateY(-2px);
+  background: #fff;
+  color: #254a32;
+}
+
+.impact-volunteer-btn {
+  background: transparent;
+  color: #fff;
+}
+
+.impact-volunteer-btn:hover {
+  transform: translateY(-2px);
+  background: #fff;
+  color: #254a32;
+}
+
+/* ========================================
+   FOCUS STATES
+======================================== */
+
+.impact-page a:focus-visible,
+.impact-page button:focus-visible {
+  outline: 3px solid var(--impact-focus);
+  outline-offset: 4px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 992px) {
+  .impact-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .impact-card {
+    min-height: 245px;
+    padding: 23px;
+  }
+
+  .impact-content {
+    padding: 60px 24px 65px;
+  }
+
+  .impact-explore-heading {
+    margin-top: 50px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 576px) {
+  .impact-hero {
+    min-height: 390px;
+  }
+
+  .impact-hero-image {
+    object-position: center;
+  }
+
+  .impact-overlay {
+    background: rgba(12, 30, 19, 0.72);
+  }
+
+  .impact-hero-content {
+    width: calc(100% - 36px);
+    margin: 75px auto 60px;
+  }
+
+  .impact-eyebrow {
+    margin-bottom: 14px;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .impact-hero-content h1 {
+    font-size: clamp(29px, 8vw, 38px);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  .impact-hero-content > p {
+    margin: 16px 0 23px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .impact-hero-btn {
+    gap: 9px;
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  .impact-hero-bottom {
+    right: 18px;
+    bottom: 16px;
+    left: 18px;
+    gap: 8px;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .impact-bottom-line {
+    flex-basis: 17px;
+  }
+
+  .impact-content {
+    padding: 48px 18px 50px;
+  }
+
+  .impact-intro-label {
+    gap: 8px;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .impact-intro-label span {
+    flex-basis: 18px;
+  }
+
+  .impact-intro h2 {
+    margin-bottom: 17px;
+    font-size: 29px;
+  }
+
+  .impact-intro > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .impact-explore-heading {
+    display: block;
+    margin: 42px 0 22px;
+  }
+
+  .impact-explore-heading h3 {
+    font-size: 27px;
+  }
+
+  .impact-explore-heading > p {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .impact-cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .impact-card {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .impact-card-top {
+    margin-bottom: 18px;
+  }
+
+  .impact-card p {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .impact-cta {
+    padding: 55px 20px;
+  }
+
+  .impact-cta-inner h2 {
+    font-size: 32px;
+  }
+
+  .impact-cta-inner > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .impact-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .impact-donate-btn,
+  .impact-volunteer-btn {
+    width: 100%;
+    min-height: 47px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .impact-page *,
+  .impact-page *::before,
+  .impact-page *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

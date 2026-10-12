@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Women and Child Welfare",
+    "image": "one"
+  },
+ 
+  {
+    "title": "Healthcare",
+    "image": "healthcare"
+  },
+  {
+    "title": "Skill Development",
+    "image": "skilldevelopment"
+  },
+  {
+    "title": "Animal Welfare",
+    "image": "puppy"
+  },
+  {
+    "title": "Elderly Care",
+    "image": "elderlycare"
+  },
+  {
+    "title": "Environment",
+    "image": "environment"
+  }
+]

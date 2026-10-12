@@ -1,0 +1,704 @@
+/* =========================================
+   GRANT PAGE BASE
+========================================= */
+
+.grant-page {
+  --grant-green: var(--primary-green, #315b3b);
+  --grant-green-dark: var(--dark-green, #254a32);
+  --grant-text: #293b2f;
+  --grant-muted: #5e685f;
+  --grant-border: #dfe8dc;
+  --grant-surface: var(--light-green, #f3f7ef);
+  --grant-focus: #d7b86c;
+
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+  color: var(--grant-text);
+}
+
+.grant-page *,
+.grant-page *::before,
+.grant-page *::after {
+  box-sizing: border-box;
+}
+
+.grant-page img {
+  max-width: 100%;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.grant-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 440px;
+  overflow: hidden;
+  background: #18251c;
+}
+
+.grant-hero > .hero-img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+.grant-hero > .hero-img > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+.grant-hero > .inner-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 32, 20, 0.78),
+    rgba(13, 32, 20, 0.38)
+  );
+  pointer-events: none;
+}
+
+.grant-hero > .inner-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1100px, calc(100% - 48px));
+  margin: 75px auto 65px;
+  padding: 0;
+  animation: grantHeroReveal 0.8s ease-out both;
+}
+
+.grant-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #e0edcf;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  line-height: 1.6;
+}
+
+.grant-hero .inner-hero-content h1 {
+  max-width: 800px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -1.2px;
+  text-wrap: balance;
+}
+
+.grant-hero .inner-hero-content h2 {
+  margin: 15px 0 0;
+  color: #e0edcf;
+  font-size: clamp(20px, 2.5vw, 27px);
+  font-weight: 700;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+.grant-hero .inner-hero-content p {
+  max-width: 570px;
+  margin: 14px 0 25px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 15px;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+
+.grant-hero-btn,
+.grant-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1px solid #d8e8c7;
+  border-radius: 5px;
+  background: #d8e8c7;
+  color: #25452f;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.grant-hero-btn:hover,
+.grant-cta-btn:hover {
+  transform: translateY(-2px);
+  border-color: #fff;
+  background: #fff;
+  color: #25452f;
+}
+
+.grant-hero-bottom {
+  position: absolute;
+  right: max(24px, calc((100% - 1100px) / 2));
+  bottom: 18px;
+  left: max(24px, calc((100% - 1100px) / 2));
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.grant-hero-line {
+  flex: 0 0 28px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.grant-intro {
+  padding: clamp(48px, 7vw, 75px) 20px;
+  background: #fff;
+}
+
+.grant-page-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.grant-intro-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grant-section-label {
+  display: inline-block;
+  margin-bottom: 13px;
+  color: var(--grant-green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  line-height: 1.7;
+}
+
+.grant-intro h2 {
+  margin: 0 0 22px;
+  color: #293f30;
+  font-size: clamp(28px, 3.5vw, 39px);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+  text-wrap: balance;
+}
+
+.grant-intro-content > p {
+  max-width: 790px;
+  margin: 0 auto 15px;
+  color: var(--grant-muted);
+  font-size: 14px;
+  line-height: 1.9;
+  text-wrap: pretty;
+}
+
+.grant-intro-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  max-width: 720px;
+  margin: 30px auto 0;
+  padding: 17px 20px;
+  border: 1px solid var(--grant-border);
+  border-radius: 8px;
+  background: #f6f9f3;
+  color: #36563b;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.grant-note-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e3eddc;
+  color: var(--grant-green);
+  font-size: 19px;
+}
+
+/* =========================================
+   IMPACT SECTION
+========================================= */
+
+.grant-impact {
+  padding: clamp(50px, 7vw, 75px) 20px clamp(55px, 7.5vw, 80px);
+  background: var(--grant-surface);
+}
+
+.grant-section-heading {
+  max-width: 740px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.grant-section-heading h2 {
+  margin: 0 0 14px;
+  color: #293f30;
+  font-size: clamp(27px, 3.5vw, 37px);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  text-wrap: balance;
+}
+
+.grant-section-heading > p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #606b61;
+  font-size: 14px;
+  line-height: 1.85;
+  text-wrap: pretty;
+}
+
+/* =========================================
+   IMPACT CARDS
+========================================= */
+
+.grant-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 20px;
+}
+
+.grant-impact-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 255px;
+  padding: 24px 21px 26px;
+  overflow: hidden;
+  border: 1px solid #dce7d8;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(36, 67, 42, 0.045);
+  animation: grantCardSlideUp 0.65s ease-out both;
+  animation-delay: calc(0.12s + var(--card-index, 0) * 0.1s);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.grant-impact-card:hover {
+  transform: translateY(-3px);
+  border-color: #91b18b;
+  box-shadow: 0 13px 32px rgba(36, 67, 42, 0.11);
+}
+
+.grant-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 23px;
+}
+
+.grant-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 47px;
+  width: 47px;
+  height: 47px;
+  border-radius: 10px;
+  background: #eaf2e5;
+  color: var(--grant-green);
+  font-size: 21px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.grant-impact-card:hover .grant-icon {
+  background: var(--grant-green);
+  color: #fff;
+}
+
+.grant-card-number {
+  color: #778676;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.grant-impact-card h3 {
+  margin: 0 0 12px;
+  color: #2d4a35;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+.grant-impact-card p {
+  flex-grow: 1;
+  margin: 0 0 18px;
+  color: #606b61;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.grant-card-accent {
+  width: 35px;
+  height: 3px;
+  margin-top: auto;
+  border-radius: 5px;
+  background: #87a977;
+  transition: width 0.25s ease;
+}
+
+.grant-impact-card:hover .grant-card-accent {
+  width: 60px;
+}
+
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.grant-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(52px, 7vw, 75px) 20px;
+  background: var(--grant-green-dark);
+  color: #fff;
+  text-align: center;
+}
+
+.grant-cta-decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 360px;
+  height: 360px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.grant-cta-decoration span {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+}
+
+.grant-cta-decoration span:nth-child(2) {
+  inset: 35px;
+}
+
+.grant-cta-decoration span:nth-child(3) {
+  inset: 70px;
+}
+
+.grant-cta-inner {
+  max-width: 750px;
+  margin: 0 auto;
+  animation: grantSlideUp 0.8s ease-out both;
+}
+
+.grant-cta-label {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #e0edcf;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.grant-cta h2 {
+  margin: 0 0 17px;
+  color: #fff;
+  font-size: clamp(29px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.grant-cta h2 span {
+  color: #d5e7c4;
+}
+
+.grant-cta p {
+  max-width: 620px;
+  margin: 0 auto 27px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  line-height: 1.9;
+  text-wrap: pretty;
+}
+
+.grant-cta-btn {
+  border-color: #d5e7c4;
+  background: #d5e7c4;
+  color: #254a32;
+}
+
+/* =========================================
+   FOCUS STATES
+========================================= */
+
+.grant-page a:focus-visible,
+.grant-page button:focus-visible {
+  outline: 3px solid var(--grant-focus);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+  .grant-impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .grant-impact-card {
+    min-height: 225px;
+    padding: 23px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+  .grant-hero {
+    min-height: 400px;
+  }
+
+  .grant-hero > .hero-img > img {
+    object-position: center;
+  }
+
+  .grant-hero > .inner-hero-overlay {
+    background: rgba(13, 32, 20, 0.72);
+  }
+
+  .grant-hero > .inner-hero-content {
+    width: calc(100% - 36px);
+    margin: 75px auto 65px;
+  }
+
+  .grant-eyebrow {
+    margin-bottom: 13px;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .grant-hero .inner-hero-content h1 {
+    font-size: clamp(30px, 8vw, 38px);
+    line-height: 1.18;
+    letter-spacing: -0.5px;
+  }
+
+  .grant-hero .inner-hero-content h2 {
+    margin-top: 12px;
+    font-size: 20px;
+  }
+
+  .grant-hero .inner-hero-content p {
+    margin: 13px 0 22px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .grant-hero-btn {
+    gap: 9px;
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  .grant-hero-bottom {
+    right: 18px;
+    bottom: 17px;
+    left: 18px;
+    gap: 8px;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .grant-hero-line {
+    flex-basis: 16px;
+  }
+
+  .grant-intro {
+    padding: 48px 18px;
+  }
+
+  .grant-intro h2 {
+    margin-bottom: 18px;
+    font-size: 29px;
+  }
+
+  .grant-intro-content > p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .grant-intro-note {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 11px;
+    margin-top: 24px;
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .grant-note-icon {
+    flex-basis: 35px;
+    width: 35px;
+    height: 35px;
+    font-size: 17px;
+  }
+
+  .grant-impact {
+    padding: 48px 18px 52px;
+  }
+
+  .grant-section-heading {
+    margin-bottom: 27px;
+  }
+
+  .grant-section-heading h2 {
+    font-size: 28px;
+  }
+
+  .grant-section-heading > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .grant-impact-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .grant-impact-card {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .grant-card-top {
+    margin-bottom: 17px;
+  }
+
+  .grant-impact-card p {
+    margin-bottom: 18px;
+    font-size: 13px;
+  }
+
+  .grant-cta {
+    padding: 53px 20px;
+  }
+
+  .grant-cta h2 {
+    font-size: 30px;
+  }
+
+  .grant-cta p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .grant-cta-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .grant-cta-decoration {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@keyframes grantHeroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grantSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes grantCardSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grant-page *,
+  .grant-page *::before,
+  .grant-page *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

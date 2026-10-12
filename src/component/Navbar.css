@@ -1,0 +1,192 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.site-navbar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100% - 30px, 910px);
+  min-height: 55px;
+  background: var(--primary-green);
+  border-radius: 0 0 22px 22px;
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+.navbar-inner {
+  min-height: 55px;
+}
+
+.site-logo {
+  color: white !important;
+  font-family: Georgia, serif;
+  font-size: 29px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.site-navbar .nav-link {
+  color: white !important;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 20px 7px !important;
+  white-space: nowrap;
+  border: none;
+  background: transparent;
+}
+
+.site-navbar .nav-link:hover {
+  opacity: 0.75;
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.site-navbar .dropdown-menu {
+  background: var(--primary-green);
+  border: 0;
+  border-radius: 0 0 10px 10px;
+  padding: 8px;
+}
+
+.site-navbar .dropdown-item {
+  color: white;
+  font-size: 9px;
+  padding: 8px 10px;
+}
+
+.site-navbar .dropdown-item:hover {
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+/* =========================
+   TOGGLER
+========================= */
+
+.site-navbar .navbar-toggler {
+  border: 1px solid white;
+  color: white;
+  padding: 5px 8px;
+  box-shadow: none !important;
+}
+
+.site-navbar .navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar-toggler i {
+  color: white;
+  font-size: 22px;
+}
+
+
+/* ==================================================
+   TABLET + MOBILE
+================================================== */
+
+@media (max-width: 991.98px) {
+
+  .site-navbar {
+    width: calc(100% - 20px);
+    min-height: 55px;
+    padding: 0 15px;
+    border-radius: 0 0 18px 18px;
+  }
+
+  .navbar-inner {
+    min-height: 55px;
+  }
+
+  .site-logo {
+    font-size: 24px;
+  }
+
+  /* Open mobile menu */
+
+  .site-navbar .navbar-collapse {
+    background: var(--primary-green);
+    margin: 0 -15px;
+    padding: 10px 15px 15px;
+    border-radius: 0 0 18px 18px;
+  }
+
+  .site-navbar .navbar-nav {
+    width: 100%;
+    align-items: stretch !important;
+  }
+
+  .site-navbar .nav-item {
+    width: 100%;
+  }
+
+  .site-navbar .nav-link {
+    width: 100%;
+    font-size: 12px;
+    padding: 11px 8px !important;
+    text-align: left;
+  }
+
+  /* =========================
+     MOBILE DROPDOWN
+  ========================= */
+
+  .site-navbar .dropdown-menu {
+    position: static !important;
+    width: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+  }
+
+  .site-navbar .dropdown-item {
+    font-size: 11px;
+    padding: 9px 10px;
+  }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 575.98px) {
+
+  .site-navbar {
+    width: calc(100% - 12px);
+    padding: 0 12px;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .site-logo {
+    font-size: 21px;
+  }
+
+  .site-navbar .navbar-collapse {
+    margin: 0 -12px;
+    padding: 8px 12px 12px;
+  }
+
+  .site-navbar .nav-link {
+    font-size: 11px;
+    padding: 9px 6px !important;
+  }
+
+  .site-navbar .dropdown-item {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+
+  .navbar-toggler {
+    padding: 4px 7px;
+  }
+
+  .navbar-toggler i {
+    font-size: 20px;
+  }
+}

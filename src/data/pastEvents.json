@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Guardians of all Voiceless – Cat Shelter Foundation Stone",
+    "date": "01-09-2025",
+    "location": "Patiala",
+    "image": "/images/events/animal-shelter.jpg",
+    "description": "In India, millions of street animals face challenges like lack of shelter, medical care and compassion."
+  },
+  {
+    "title": "Mega Health Checkup Camp",
+    "date": "2025",
+    "location": null,
+    "image": "/images/events/health-checkup.jpg",
+    "description": "A community healthcare initiative focused on accessible medical support."
+  },
+  {
+    "title": "Anemia Screening Camp",
+    "date": "2025",
+    "location": null,
+    "image": "/images/events/anemia-screening.jpg",
+    "description": "A health awareness and screening initiative supporting community wellbeing."
+  }
+]

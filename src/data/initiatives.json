@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Women & Child Welfare",
+    "image": "one.png",
+    "text": "Supporting women and children through initiatives that promote dignity, safety, opportunity and a better quality of life."
+  },
+  {
+    "title": "Healthcare",
+    "image": "elder.png",
+    "text": "Supporting healthcare initiatives that improve access to essential medical services and promote healthier communities."
+  },
+  {
+    "title": "Education",
+    "image": "education.jpg",
+    "text": "Creating opportunities for children and communities through education, learning resources and meaningful support."
+  },
+  {
+    "title": "Environment",
+    "image": "planting.png",
+    "text": "Supporting environmental initiatives that encourage sustainability, conservation and responsible community action."
+  },
+  {
+    "title": "Skills Development",
+    "image": "skilldevelopment.jpg",
+    "text": "Helping individuals develop practical skills that can create opportunities, independence and sustainable livelihoods."
+  }
+]
